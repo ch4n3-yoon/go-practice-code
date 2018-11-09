@@ -14,7 +14,7 @@ func integration(start float64, end float64, width float64) (result float64) {
 	var i float64
 	result = 0.0
 	for i = start; i < end; i += width {
-		result += f(i) * width
+		result += math.Abs(f(i) * width)
 	}
 
 	return result
